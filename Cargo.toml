@@ -1,0 +1,21 @@
+[package]
+name = "rug-dynamic"
+version = "0.1.0"
+edition = "2021"
+license = "LGPL-3.0-or-later"
+
+[lib]
+crate-type = ["dylib"]
+
+[features]
+default = ["integer", "rational", "float", "complex", "rand"]
+integer = ["rug/integer"]
+rational = ["rug/rational"]
+float = ["rug/float"]
+complex = ["rug/complex"]
+rand = ["rug/rand"]
+fail-on-warnings = ["rug/fail-on-warnings"]
+num-traits = ["rug/num-traits"]
+
+[dependencies]
+rug = {version = "1.19", default-features = false }
